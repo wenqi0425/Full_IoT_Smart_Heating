@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title> Titanic Weather </title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="top">
+        <div class="nav">
+            <a class="active" href="\index.html">Main</a>
+            <a href="\pi.html">Cute Pi</a>
+            <a href="\forecast.html">Forecast</a>
+            <a href="\add-on.html">Add On</a>
+        </div>
+
+        <div class="weatherBox" ;>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <img id="pic" />
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="temperature">
+                <span id="temp" class="number"></span>
+                <span>°C</span>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+            </div>
+
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+
+            <div class="bottom-details">
+                <div class="column wind" ;>
+                    <img src="icons\wind-48.png" />
+                    <div class="details">
+                        <span id="wind"></span>
+                        <span>m/s</span>
+                        <p>Wind</p>
+                    </div>
+                </div>
+
+                <div class="column humidity" ;>
+                    <img src="icons\humidity.png" />
+                    <div class="details">
+                        <span id="humid"></span>
+                        <span>%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

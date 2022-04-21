@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Password</title>
+    <link rel="stylesheet" href="css\unlock.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="unlock">
+        <input type="password" placeholder="Enter pwd to unlock Titanic" required>
+        <span class="show-btn"><i class="fas fa-eye"></i></span>
+    </div>
+
+    <script>
+        const password = document.querySelector("input");
+        const showBtn = document.querySelector("span i");
+        showBtn.onclick = (() => {
+            if (password.type === "password") {
+                password.type = "text";
+                showBtn.classList.add("hide-btn");
+            } else {
+                password.type = "password";
+                showBtn.classList.remove("hide-btn");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #43AFFC;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.top {
+    width: 400px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #A3D4F7;
+}
+
+    .nav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        width: 100px;
+    }
+
+        .nav a:hover {
+            background-color: #54D989;
+            color: black;
+        }
+
+        .nav a.active {
+            background-color: #54D989;
+            color: white;
+            width: 100px;
+        }
+
+
+.weatherBox {
+    height: 650px;
+    width: 400px;
+    text-align: center;
+    flex-direction: column;
+    background: #fff;
+}
+
+    .weatherBox .space {
+        height: 20px;
+    }
+
+    .weatherBox img {
+        max-width: 200px;
+        margin-top: 20px;
+    }
+
+    .weatherBox .temperature {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .weatherBox .bottom-details {
+        display: flex;
+        width: 100%;
+        height: 17%;
+        border-top: 1px solid #ccc;
+    }
+
+.bottom-details .column {
+    display: flex;
+    width: 100%;
+    padding: 30px;
+}
+
+.column .details p {
+    font-size: 14px;
+    margin: 5px;
+}
+
+.details .temp, .wind span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.details .temp, .wind img {
+    margin-right: 10px;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.column.humidity {
+    border-left: 1px solid #ccc;
+    border: top 1px;
+}
+
+.details .temp, .humidity span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.details .temp, .humidity img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.column.heating {
+    border-left: 1px solid #ccc;
+    border: top 1px;
+}
+
+.details .temp, .heating span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.details .temp, .heating img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.column.windF {
+    border-left: 1px solid #ccc;
+    border: top 1px;
+}
+
+.details .temp, .windF span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.details .temp, .windF img {
+    margin-right: 10px;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+
+.details .temp, .windP span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.details .temp, .windP img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.column.humidityP {
+    border-left: 1px solid #ccc;
+    border: top 1px;
+}
+
+.column.humidity {
+    border-left: 1px solid #ccc;
+    border: top 1px;
+}
+
+.details .temp, .humidityP span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/* charts */
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#canvas {
+    width: 100%;
+}
+
+/* toggle switch  */
+input[type=checkbox].toggle {
+    display: none;
+}
+
+    input[type=checkbox].toggle + label {
+        display: inline-block;
+        height: 4rem;
+        width: 10rem;
+        position: relative;
+        font-size: 1.6rem;
+        border: 0.3rem solid skyblue;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        box-sizing: border-box;
+        border-radius: 4rem;
+    }
+
+        input[type=checkbox].toggle + label:before {
+            width: 6rem;
+            text-align: center;
+            z-index: 2;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        input[type=checkbox].toggle + label:after {
+            position: absolute;
+            margin: 0.2rem;
+            height: 3rem;
+            width: 3rem;
+            content: '';
+            z-index: 3;
+            border-radius: 40px;
+        }
+
+    input[type=checkbox].toggle:not(:checked) + label:before {
+        content: attr(data-unchecked);
+        right: 0;
+        left: auto;
+        opacity: 1;
+        color: white;
+    }
+
+    /* toggle.heating */
+
+    input[type=checkbox].toggle:not(:checked) + label.heating {
+        text-align: left;
+        background-color: rgb(167, 160, 160);
+    }
+
+        input[type=checkbox].toggle:not(:checked) + label.heating:after {
+            left: 0.1rem;
+            background-color: grey;
+        }
+
+    input[type=checkbox].toggle:checked + label.heating {
+        text-align: left;
+        background-color: #3ba272;
+    }
+
+        input[type=checkbox].toggle:checked + label.heating:after {
+            left: 6rem;
+            background-color: lightgreen;
+        }
+
+    /* toggle.time */
+
+    input[type=checkbox].toggle:not(:checked) + label.time:after {
+        left: 0.1rem;
+        background-color: #73c0de;
+    }
+
+    input[type=checkbox].toggle:checked + label.time:after {
+        left: 6rem;
+        background-color: #73c0de;
+    }
+
+
+    input[type=checkbox].toggle:checked + label.time {
+        text-align: left;
+        background-color: #ee6666;
+    }
+
+    input[type=checkbox].toggle:not(checked) + label.time {
+        text-align: left;
+        background-color: #ee6666;
+    }
+
+    input[type=checkbox].toggle:checked + label:before {
+        content: attr(data-checked);
+        right: auto;
+        left: 0.3rem;
+        opacity: 1;
+        color: white;
+
+
+    }
+
+    input[type=checkbox]:disabled.toggle:not(checked) + label.time {
+        text-align: left;
+        background-color: grey;
+    }
+    input[type=checkbox]:disabled.toggle:not(checked) + label.time {
+        text-align: left;
+        background-color: grey;
+    }
+
+
+    /*input[type=checkbox].toggle:checked + label.time :enabled{
+        text-align: left;
+        background-color: #ee6666;
+    }
+
+    
+
+    input[type=checkbox].toggle:checked + label.time :enabled {
+        text-align: left;
+        background-color: #ee6666;
+    }
+
+    input[type=checkbox].toggle:not(checked) + label.time :disabled {
+        text-align: left;
+        background-color: grey;
+    }*/
+
+/* unlock page */

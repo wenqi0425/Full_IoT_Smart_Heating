@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TitanicUDPServer</name>
+    </assembly>
+    <members>
+        <member name="M:TitanicUDPServer.Program.PostHeatingLevel(RestClient.Worker,System.Int32)">
+            <summary>
+            Calls the worker's post method if the Pi didn't send a signal not to.
+            </summary>
+            <param name="worker"></param>
+            <param name="_integer"></param>
+        </member>
+    </members>
+</doc>

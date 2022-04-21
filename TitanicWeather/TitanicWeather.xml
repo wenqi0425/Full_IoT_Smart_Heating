@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TitanicWeather</name>
+    </assembly>
+    <members>
+        <member name="T:TitanicWeather.Controllers.TitanicController">
+            <summary>
+            This is a controller for the titanic application
+            </summary>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.#ctor">
+            <summary>
+            This is the constructor for the controller that takes no parameters
+            </summary>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.GetRecentMeasurement">
+            <summary>
+            This method gets the most recent measurement out of the database
+            </summary>
+            <returns>The most recent measurement</returns>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.GetAllMeasurements">
+            <summary>
+            This method gets all the measurements that have been made and stored in the database
+            </summary>
+            <returns>A list of all the measurements that are saved in the database</returns>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.GetCommand">
+            <summary>
+            This method is used to get the command that the web application sends so it knows what to do according to the command
+            that is passed
+            </summary>
+            <returns>The received command</returns>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.GetHeatingLevel">
+            <summary>
+            Gets the heating level that the web application sends
+            </summary>
+            <returns>The received heating level</returns>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.GetSummarizedData">
+            <summary>
+            Gets the last week of data that is stored in the database
+            </summary>
+            <returns>a list of data of the last week</returns>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.GetPiIcon">
+            <summary>
+            Gets the icon that the web application sends in order to be able to show the right icon on the Pi
+            </summary>
+            <returns>The received icon which is a string</returns>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.PostCommand(TitanicWeather.Models.Command)">
+            <summary>
+            Used to set the command on the web application
+            </summary>
+            <param name="command">The command that should be send</param>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.PostHeatingLevel(TitanicWeather.Models.HeatingLevel)">
+            <summary>
+            Used to set the heating level on the web application
+            </summary>
+            <param name="heatingLevel">The heating level that should be send</param>
+        </member>
+        <member name="M:TitanicWeather.Controllers.TitanicController.PostPiIcon(TitanicWeather.Models.PiIcon)">
+            <summary>
+            Used to post the icon to the web application
+            </summary>
+            <param name="piIcon">The pi icon</param>
+        </member>
+        <member name="T:TitanicWeather.Managers.TitanicManager">
+            <summary>
+            Class with methods used in the Rest API.
+            </summary>
+        </member>
+        <member name="T:TitanicWeather.Managers.TitanicManagerDB">
+            <summary>
+            Manager class that interacts with the database.
+            </summary>
+        </member>
+        <member name="M:TitanicWeather.Managers.TitanicManagerDB.SummarizeDataForTheDay(System.Collections.Generic.IEnumerable{TitanicWeather.Models.Measurement},System.DateTime)">
+            <summary>
+            Sumarises a lot of measurements  and returns summarised data in another object
+            It is assumed that all of the measurements would be of the same day
+            </summary>
+            <param name="dayMeasures">list of measurements that need to be summarised</param>
+            <param name="dt">date of the measurements(to ensure that even if list is empty the data is still processed)</param>
+            <returns>returns object that contains min and max temperatuure and humidity in given list</returns>
+        </member>
+        <member name="M:TitanicWeather.Managers.TitanicManagerDB.GetSummarizedData">
+            <summary>
+            Method gets data from database and through foreach loop runs it throuhg another method to summarise data for the day
+            
+            </summary>
+            <returns>returns a Ienumerable off summarised data for last 7 days(including today) in chronological order</returns>
+        </member>
+        <member name="T:TitanicWeather.Models.SummarizedData">
+            <summary>
+            Model for summarizing data for the day.
+            </summary>
+        </member>
+    </members>
+</doc>

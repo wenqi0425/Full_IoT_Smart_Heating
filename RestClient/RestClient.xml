@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestClient</name>
+    </assembly>
+    <members>
+        <member name="M:RestClient.Program.SendMessage(System.String,System.Int32)">
+            <summary>
+            UDP broadcaster.
+            </summary>
+            <param name="message"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:RestClient.Program.ReceiveLoop(RestClient.Worker)">
+            <summary>
+            Getting command from Rest API, resetting it and sending to Pi.
+            </summary>
+            <param name="worker"></param>
+        </member>
+        <member name="M:RestClient.Program.ReceiveIcon(RestClient.Worker)">
+            <summary>
+            Checks if the received icon is different from the one stored in the static instance field.
+            </summary>
+            <param name="worker"></param>
+        </member>
+        <member name="M:RestClient.Program.IconCheck(System.String)">
+            <summary>
+            Checks the name of string parameter and changes it to be compatible with Pi scripts.
+            </summary>
+            <param name="iconName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RestClient.Worker">
+            <summary>
+            Class with get and post methods for the Rest API
+            </summary>
+        </member>
+    </members>
+</doc>

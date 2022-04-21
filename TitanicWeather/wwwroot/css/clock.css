@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #43AFFC;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.top {
+    width: 400px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #A3D4F7;
+}
+
+    .nav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        width: 100px;
+    }
+
+        .nav a:hover {
+            background-color: #54D989;
+            color: black;
+        }
+
+        .nav a.active {
+            background-color: #54D989;
+            color: white;
+            width: 100px;
+        }
+
+.weatherBox {
+    height: 650px;
+    width: 400px;
+    text-align: center;
+    flex-direction: column;
+    background: #fff;
+}
+
+    .weatherBox .space {
+        height: 20px;
+    }
+
+    .weatherBox img {
+        max-width: 200px;
+        margin-top: 20px;
+    }
+
+/* header */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4em;
+    color: #43AFFC;
+}
+
+/* buttons */
+button {
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 10px 30px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: 0;
+    color: #43AFFC;
+    transition: all ease 300ms;
+}
+
+    button:hover {
+        color: #333;
+        background: #43AFFC;
+    }
+
+/* center content vertically and horizontally */
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+/* variable misc classes */
+.hide {
+    display: none;
+}

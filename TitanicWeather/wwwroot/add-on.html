@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title> Titanic Weather </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clock.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="top">
+        <div class="nav">
+            <a href="\index.html">Main</a>
+            <a href="\pi.html">Cute Pi</a>
+            <a href="\forecast.html">Forecast</a>
+            <a class="active" href="\add-on.html">Add On</a>
+        </div>
+
+        <div class="weatherBox" ;>
+            <div class="table">
+                <div class="cell">
+                    <h1 id="clock" class="clock"></h1>
+
+                    <div class="space"></div>
+
+                    <div class="alarm">
+                        <h3>Set Alarm Time</h3>
+                        <div class="space"></div>
+                        <select id="hours"></select>
+                        <select id="minutes"></select>
+                        <select id="seconds"></select>
+                        <select id="ampm">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+
+                    <div class="space"></div>
+
+                    <p>
+                        <button id="snooze" class="hide">Snooze</button>
+                        <button id="startstop">Set Alarm</button>
+                    </p>
+                </div>
+            </div>
+
+            <script src="js/script.js"></script>
+            <script src="js/clock.js"></script>
+
+</body>
+</html>
