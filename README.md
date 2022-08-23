@@ -12,6 +12,11 @@ Our idea was to make a weather application with a Raspberry Pi. The main idea is
 
 Our weather API is published at this web address: https://titanicweatherapi.azurewebsites.net/
 
+![image](https://user-images.githubusercontent.com/101533381/186203588-7f4a8c35-dc0a-4975-935b-3308230ba418.png)
+![image](https://user-images.githubusercontent.com/101533381/186203631-6e5d6873-2e1b-41db-b195-6ea5c19a08dd.png)
+![image](https://user-images.githubusercontent.com/101533381/186203665-0c38ff6a-8aba-4712-9361-18f091e22dfd.png)
+![image](https://user-images.githubusercontent.com/101533381/186203695-a8a8990f-a722-4dd2-8e54-32482637dd73.png)
+
 GET
 
 https://titanicweatherapi.azurewebsites.net/api/Titanic/All
